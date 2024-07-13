@@ -1,0 +1,25 @@
+#######################
+# Spring boot properties
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+########################
+
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+
+  datasource:
+    # jdbc:sqlite:animal.db
+    url: jdbc:sqlite:memory:myDb?cache=shared
+    driver-class-name: org.sqlite.JDBC
+    username: sa
+    password: sa
+
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+
+hibernate:
+  # Hibernate ddl auto (create, create-drop, validate, update)
+  hbm2ddl:
+    auto: create
+  show_sql: false
